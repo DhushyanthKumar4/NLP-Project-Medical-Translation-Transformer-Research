@@ -71,3 +71,9 @@ if st.button("Translate"):
         st.subheader(" Diagnostics")
         st.write(f"Input Length: {len(text.split())}")
         st.write(f"Output Length: {len(output.split())}")
+
+
+# UX Upgrade
+
+if len(output.strip()) < 5:
+    st.error(" Low-confidence / degenerate output detected")
